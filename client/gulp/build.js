@@ -20,36 +20,36 @@ gulp.task('styles', ['wiredep', 'injector:css:preprocessor'], function () {
 gulp.task('injector:css:preprocessor', function () {
   return gulp.src('src/app/index.scss')
     .pipe($.inject(gulp.src([
-        'src/{app,components}/**/*.scss',
+        'src/{app,partials}/**/*.scss',
         '!src/app/index.scss',
-        '!src/app/vendor.scss' 
+        '!src/app/vendor.scss'
       ], {read: false}), {
       transform: function(filePath) {
         filePath = filePath.replace('src/app/', '');
-        filePath = filePath.replace('src/components/', '../components/');
+        filePath = filePath.replace('src/partials/', '../partials/');
         return '@import \'' + filePath + '\';';
       },
       starttag: '// injector',
       endtag: '// endinjector',
       addRootSlash: false
     }))
-    .pipe(gulp.dest('src/app/'));
+    .pipe(gulp.dest('.tmp/app/'));
 });
 
 gulp.task('injector:css', ['styles'], function () {
   return gulp.src('src/index.html')
     .pipe($.inject(gulp.src([
-        '.tmp/{app,components}/**/*.css',
+        '.tmp/{app,partials}/**/*.css',
         '!.tmp/app/vendor.css'
       ], {read: false}), {
       ignorePath: '.tmp',
       addRootSlash: false
     }))
-    .pipe(gulp.dest('src/'));
+    .pipe(gulp.dest('.tmp/'));
 });
 
 gulp.task('scripts', function () {
-  return gulp.src('src/{app,components}/**/*.js')
+  return gulp.src('src/{app,partials}/**/*.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'));
 });
@@ -57,18 +57,18 @@ gulp.task('scripts', function () {
 gulp.task('injector:js', ['scripts', 'injector:css'], function () {
   return gulp.src(['src/index.html', '.tmp/index.html'])
     .pipe($.inject(gulp.src([
-      'src/{app,components}/**/*.js',
-      '!src/{app,components}/**/*.spec.js',
-      '!src/{app,components}/**/*.mock.js'
+      'src/{app,partials}/**/*.js',
+      '!src/{app,partials}/**/*.spec.js',
+      '!src/{app,partials}/**/*.mock.js'
     ]).pipe($.angularFilesort()), {
       ignorePath: 'src',
       addRootSlash: false
     }))
-    .pipe(gulp.dest('src/'));
+    .pipe(gulp.dest('.tmp/'));
 });
 
 gulp.task('partials', ['consolidate'], function () {
-  return gulp.src(['src/{app,components}/**/*.html', '.tmp/{app,components}/**/*.html'])
+  return gulp.src(['src/{app,partials}/**/*.html', '.tmp/{app,partials}/**/*.html'])
     .pipe($.minifyHtml({
       empty: true,
       spare: true,
