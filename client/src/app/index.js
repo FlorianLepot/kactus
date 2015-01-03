@@ -4,8 +4,8 @@ angular.module('organizat', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'partials/homepage/index.html',
+        controller: 'HomeCtrl'
       })
       .otherwise({
         redirectTo: '/'
