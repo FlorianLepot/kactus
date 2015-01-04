@@ -63,7 +63,12 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping: true
+        auto_mapping: false
+        mappings:
+            AppBundle:
+                    type: yml
+                    dir: %kernel.root_dir%/../src/AppBundle/Resources/config/doctrine
+                    prefix: Organizat\Model
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -76,7 +81,7 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: UserBundle\Entity\User
+    user_class: Organizat\Model\User
 
 nelmio_api_doc: ~
 
