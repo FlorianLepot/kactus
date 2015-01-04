@@ -29,8 +29,11 @@ html(lang="en", ng-app="organizat")
 
         include ./partials/sidebar.jade
 
-        div(layout="column" layout-fill="" tabindex="-1" role="main")
-            ng-view
+        section(ng-view layout="column" layout-fill)
+
+
+        div &nbsp;
+
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->

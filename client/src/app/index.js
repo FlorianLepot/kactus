@@ -7,6 +7,10 @@ angular.module('organizat', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 
         templateUrl: 'partials/homepage/index.html',
         controller: 'HomeCtrl'
       })
+      .when('/dashboard', {
+        templateUrl: 'partials/dashboard/index.html',
+        controller: 'DashboardCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

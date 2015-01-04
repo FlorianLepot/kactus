@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
+html {
+  font-family: 'Roboto Slab', serif;
+}
+
+[layout=row] {
+  flex-direction: row;
+}
+
 /*
  * A container inside of a rippling element (eg a button),
  * which contains all of the individual ripples

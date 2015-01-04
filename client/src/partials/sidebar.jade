@@ -1,29 +1,34 @@
-md-sidenav(class="md-sidenav-left md-whiteframe-z2" md-component-id="menu" md-is-locked-open="$media('gt-md')")
-  md-toolbar(class="md-theme-dark text-center")
-    h1(class="md-toolbar-tools")
-      a(href="" layout="row" flex="" tabindex="0")
-        div(flex="") organizat.io
+div(ng-controller="SidebarCtrl" layout="row")
+  md-sidenav(class="md-sidenav-left md-whiteframe-z2" md-component-id="menu" md-is-locked-open="$media('gt-md')" ng-show="show")
+    md-toolbar(class="md-default-theme")
+      h1(class="md-toolbar-tools")
+        a(href="#/" layout="row" flex="" tabindex="0")
+          div(flex="") organizat.io
 
-  md-content(ng-controller="SidebarCtrl")
-    button(class="menu-item menu-title md-menu-item ng-binding" ng-click="menu.toggleSelectSection(section)" md-highlight="menu.isSectionSelected(section)" md-ink-ripple="#bbb" tabindex="0") Gestion de projets
-      div(class="md-ripple-container" style="background-color: rgba(187, 187, 187, 0.0980392);")
-        div(class="md-ripple md-ripple-placed md-ripple-scaled md-ripple-visible" data-counter="0")
-    a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
-      span Clients
-        div(class="md-ripple-container")
-    a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
-      span Projets
-        div(class="md-ripple-container")
+    md-content
+      a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false" href="#dashboard")
+        span Dashboard
+          div(class="md-ripple-container")
+      button(class="menu-item menu-title md-menu-item" md-ink-ripple="#bbb" tabindex="0") Gestion de projets
+        div(class="md-ripple-container" style="background-color: rgba(187, 187, 187, 0.0980392);")
+          div(class="md-ripple md-ripple-placed md-ripple-scaled md-ripple-visible" data-counter="0")
+      a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
+        span Clients
+          div(class="md-ripple-container")
+      a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
+        span Projets
+          div(class="md-ripple-container")
 
-    button(class="menu-item menu-title md-menu-item ng-binding" ng-click="menu.toggleSelectSection(section)" md-highlight="menu.isSectionSelected(section)" md-ink-ripple="#bbb" tabindex="0") Comptabilité
-      div(class="md-ripple-container" style="background-color: rgba(187, 187, 187, 0.0980392);")
-        div(class="md-ripple md-ripple-placed md-ripple-scaled md-ripple-visible" data-counter="0")
-    a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
-      span Récapitulatif
-        div(class="md-ripple-container")
-    a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
-      span Factures
-        div(class="md-ripple-container")
-    a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
-      span Documents
-        div(class="md-ripple-container")
+      button(class="menu-item menu-title md-menu-item" md-ink-ripple="#bbb" tabindex="0") Comptabilité
+        div(class="md-ripple-container" style="background-color: rgba(187, 187, 187, 0.0980392);")
+          div(class="md-ripple md-ripple-placed md-ripple-scaled md-ripple-visible" data-counter="0")
+      a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
+        span Récapitulatif
+          div(class="md-ripple-container")
+      a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
+        span Factures
+          div(class="md-ripple-container")
+      a(class="menu-item menu-sub-item md-menu-item" md-ink-ripple="#bbb" aria-hidden="false")
+        span Documents
+          div(class="md-ripple-container")
+

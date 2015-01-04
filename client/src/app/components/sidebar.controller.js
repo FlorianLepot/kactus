@@ -1,13 +1,12 @@
 'use strict';
 
 angular.module('organizat')
-  .controller('SidebarCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+  .controller('SidebarCtrl', function ($scope, $timeout, $mdSidenav) {
 
-  $scope.close = function() {
-    $mdSidenav('menu').close()
-      .then(function(){
-        $log.debug('close LEFT is done');
-      });
-  };
+    $scope.show = true;
+
+    $scope.close = function() {
+      $mdSidenav('menu').close();
+    };
 
 });
