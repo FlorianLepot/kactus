@@ -11,6 +11,7 @@ class Project
 
     public function __construct()
     {
+        $this->createdAt = new \DateTime();
     }
 
     /**

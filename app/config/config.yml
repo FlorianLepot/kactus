@@ -106,3 +106,22 @@ nelmio_cors:
             allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
             max_age: 3600
             hosts: ['^api\.']
+
+
+fos_rest:
+    param_fetcher_listener: true
+    body_listener: true
+    format_listener: true
+    routing_loader:
+        default_format: json
+    view:
+        jsonp_handler: ~
+        view_response_listener: 'force'
+        formats:
+            xml:  true
+            json: true
+        templating_formats:
+            html: true
+    format_listener:
+        rules:
+            - { path: ^/, priorities: [ html, json, xml ], fallback_format: ~, prefer_extension: true }
