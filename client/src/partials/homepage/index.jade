@@ -1,8 +1,15 @@
 section(layout="column")
     md-toolbar(class="md-whiteframe-z2 md-default-theme")
       h2(class="md-toolbar-tools")
-        span Tableau de bord
+        span Home
 
     md-content(class="md-padding")
-        a(href="#dashboard")
+        a(href="#dashboard" ng-controller="HomeCtrl")
             md-button(class="md-primary md-raised") Dashboard
+
+        form(style="padding: 20px;")
+            md-input-group(tabindex="-1" label="Company" ng-model="user.company" class="ng-isolate-scope md-default-theme md-input-has-value ng-valid" aria-invalid="false")
+            md-text-float(label="Company" ng-model="user.company" disabled)
+            div(class="row")
+                md-text-float(label="FirstName" ng-model="user.firstName")
+                md-text-float(label="LastName" ng-model="user.lastName" class="long")
