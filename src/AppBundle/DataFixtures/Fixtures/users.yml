@@ -1,0 +1,6 @@
+Organizat\Model\User:
+    user{Darkouu, Naixy, Test}:
+        username: <current()>
+        plainPassword: <current()>
+        email: <current()>@gmail.com
+        enabled: true
