@@ -30,7 +30,7 @@ angular
     .config(config)
     .run(function($rootScope, $state) {
         $rootScope.$state = $state;
-    });
+    })
     .run(function(Restangular, $rootScope) {
         Restangular.setErrorInterceptor(function(response) {
             if(response.status === 401) {

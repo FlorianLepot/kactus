@@ -7,5 +7,6 @@
     angular.module('inspinia', [
         'ui.router',
         'ui.bootstrap',
+        'restangular',
     ])
 })();

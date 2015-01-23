@@ -1,0 +1,49 @@
+{
+  "name": "organizat.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/FlorianLepot/organizat.io",
+  "authors": [
+    "FlorianLepot <florian.lepot@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.10",
+    "angular-animate": "~1.3.10",
+    "angular-aria": "~1.3.10",
+    "angular-cookies": "~1.3.10",
+    "angular-loader": "~1.3.10",
+    "angular-messages": "~1.3.10",
+    "angular-mocks": "~1.3.10",
+    "angular-resource": "~1.3.10",
+    "angular-route": "~1.3.10",
+    "angular-sanitize": "~1.3.10",
+    "angular-scenario": "~1.3.10",
+    "angular-touch": "~1.3.10",
+    "angular-bootstrap-checkbox": "~0.3.1",
+    "ui-bootstrap": "~0.12.0",
+    "jquery-ui": "~1.11.2",
+    "moment": "~2.9.0",
+    "metisMenu": "~1.1.3",
+    "pace": "~1.0.2",
+    "slimscroll": "~1.3.3",
+    "angular-ui-router": "~0.2.13",
+    "font-awesome": "~4.3.0",
+    "angular-ui": "~0.4.0",
+    "angular-bootstrap": "~0.12.0",
+    "restangular": "~1.4.0"
+  },
+  "resolutions": {
+    "angular": "~1.3.10"
+  }
+}

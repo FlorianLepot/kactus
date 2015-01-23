@@ -13,7 +13,7 @@ function pageTitle($rootScope, $timeout) {
         link: function(scope, element) {
             var listener = function(event, toState, toParams, fromState, fromParams) {
                 // Default title - load on Dashboard 1
-                var title = 'Organizat.io | Loutil pour votre activité freelance !';
+                var title = 'Organizat.io | L\'outil pour votre activité freelance !';
                 // Create your own title pattern
                 if (toState.data && toState.data.pageTitle) title = 'Organizat | ' + toState.data.pageTitle;
                 $timeout(function() {
