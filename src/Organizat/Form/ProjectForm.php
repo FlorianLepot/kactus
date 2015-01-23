@@ -35,6 +35,6 @@ class ProjectForm extends AbstractType
      */
     public function getName()
     {
-        return 'organizat_project';
+        return '';
     }
 }
