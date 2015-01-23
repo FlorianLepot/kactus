@@ -7,30 +7,39 @@
  * Initial there are written stat for all view in theme.
  *
  */
-function config($stateProvider, $urlRouterProvider, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl(config.api);
-
-    $urlRouterProvider.otherwise("/");
-    $stateProvider
-        .state('dashboard', {
-            url: "/",
-            templateUrl: "views/dashboard.html",
-            data: { pageTitle: 'Tableau de bord' }
-        })
-        .state('minor', {
-            url: "/minor",
-            templateUrl: "views/minor.html",
-            data: { pageTitle: 'Example view' }
-        })
-}
+var config = {
+    api: 'http://api.organizat.dev/api'
+};
 
 angular
     .module('inspinia')
-    .config(config)
+    .config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
+        RestangularProvider.setBaseUrl(config.api);
+
+        $urlRouterProvider.otherwise("/");
+        $stateProvider
+            .state('dashboard', {
+                url: "/",
+                templateUrl: "views/dashboard.html",
+                data: { pageTitle: 'Tableau de bord' }
+            })
+            .state('minor', {
+                url: "/minor",
+                templateUrl: "views/minor.html",
+                data: { pageTitle: 'Example view' }
+            });
+
+    });
+
+angular
+    .module('inspinia')
     .run(function($rootScope, $state) {
         $rootScope.$state = $state;
-    })
+    });
+
+angular
+    .module('inspinia')
     .run(function(Restangular, $rootScope) {
         Restangular.setErrorInterceptor(function(response) {
             if(response.status === 401) {

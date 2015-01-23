@@ -1,12 +1,12 @@
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
+    <div class="row" ng-controller="DashboardCtrl as dashboard">
         <div class="col-lg-12">
-            <div class="text-center m-t-lg">
+            <div class="text-center m-t-lg" ng-repeat="project in projects">
                 <h1>
-                    {{main.helloText}}
+                    {{project.name}}
                 </h1>
                 <small>
-                    {{main.descriptionText}}
+                    {{project.created_at}}
                 </small>
             </div>
         </div>
