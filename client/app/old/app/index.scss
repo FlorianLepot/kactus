@@ -1,0 +1,154 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+
+html {
+  font-family: 'Roboto Slab', serif;
+}
+
+[layout=row] {
+  flex-direction: row;
+}
+
+/*
+ * A container inside of a rippling element (eg a button),
+ * which contains all of the individual ripples
+ */
+.md-ripple-container {
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+          transition: all 0.55s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.md-ripple {
+  position: absolute;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  opacity: 0;
+  border-radius: 50%; }
+  .md-ripple.md-ripple-placed {
+    -webkit-transition: left 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), top 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), margin 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), border 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: left 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), top 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), margin 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), border 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .md-ripple.md-ripple-scaled {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  .md-ripple.md-ripple-active, .md-ripple.md-ripple-full, .md-ripple.md-ripple-visible {
+    opacity: 0.2; }
+
+md-tab > .md-ripple-container .md-ripple {
+  box-sizing: content-box;
+  background-color: transparent !important;
+  border-width: 0;
+  border-style: solid;
+  opacity: 0.2;
+  -webkit-transform: none !important;
+          transform: none !important; }
+  md-tab > .md-ripple-container .md-ripple.md-ripple-active, md-tab > .md-ripple-container .md-ripple.md-ripple-full, md-tab > .md-ripple-container .md-ripple.md-ripple-visible {
+    opacity: 0.2; }
+
+.menu-item {
+  background: none;
+  border-width: 0;
+  cursor: pointer;
+  display: block;
+  color: #333;
+  font-size: 14px;
+  line-height: 40px;
+  max-height: 40px;
+  opacity: 1;
+  margin: 0;
+  outline: none;
+  padding: 0px 28px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition-property: max-height, background-color, opacity;
+  -moz-transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+  -moz-transition-property: max-height, background-color, opacity;
+  transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+  transition-property: max-height, background-color, opacity;
+  font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+}
+.menu-item.ng-hide {
+  max-height: 0;
+  opacity: 0;
+}
+.menu-item:hover {
+  color: #999;
+}
+.menu-item:focus {
+  font-weight: bold;
+}
+.menu-item.menu-title {
+  color: #888;
+  font-size: 14px;
+  padding-left: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  transition: color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.menu-item.menu-title:hover,
+.menu-item.menu-title.active {
+  color: #1976d2;
+}
+
+.menu-item.menu-sub-item {
+    line-height: 36px;
+}
+
+// injector
+// endinjector
+
+
+form > .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: -8px;
+}
+
+.row > * {
+  font-size: inherit;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+md-input-group.long > input {
+  width: 264px;
+}
+
+md-input-group, .md-input-group {
+  margin: 3px 0 9px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+form h1 {
+  margin-right: 30px;
+}
