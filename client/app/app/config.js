@@ -9,7 +9,7 @@
  */
 
 var config = {
-    api: 'http://api.organizat.dev/api'
+    api: 'http://organizat.api/api'
 };
 
 angular

@@ -1,3 +1,4 @@
 Organizat\Model\Project:
   organizat:
     name: Organizat
+    customer: @upro

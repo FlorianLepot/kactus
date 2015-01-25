@@ -1,0 +1,25 @@
+Organizat\Model\Customer:
+    type: entity
+    table: customers
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+
+    manyToOne:
+        image:
+            targetEntity: UPro\FileBundle\Entity\File
+            joinColumn:
+                name: file_id
+                referencedColumnName: id
+
+    oneToMany:
+        projects:
+            targetEntity: Project
+            mappedBy: customer

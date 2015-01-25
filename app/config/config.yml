@@ -30,6 +30,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+        resources:
+            - "UProFileBundle::field.html.twig"
 
 # Assetic Configuration
 assetic:
@@ -66,9 +69,11 @@ doctrine:
         auto_mapping: false
         mappings:
             AppBundle:
-                    type: yml
-                    dir: %kernel.root_dir%/../src/AppBundle/Resources/config/doctrine
-                    prefix: Organizat\Model
+                type: yml
+                dir: %kernel.root_dir%/../src/AppBundle/Resources/config/doctrine
+                prefix: Organizat\Model
+            UProFileBundle:
+                type: annotation
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -121,3 +126,27 @@ fos_rest:
 
 hautelook_alice:
     locale: fr_FR
+
+liip_imagine:
+    loaders:
+        default:
+            filesystem:
+                data_root: %kernel.root_dir%/../web/
+        filebundle:
+            filesystem:
+                data_root: ../web/files
+    filter_sets:
+        full:
+            cache: ~
+            quality: 100
+            data_loader: filebundle
+        u_pro_file_thumbnail:
+            cache: ~
+            quality: 90
+            data_loader: filebundle
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
+
+u_pro_file:
+    db_driver: orm
+    storage_path: web/files

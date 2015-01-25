@@ -17,3 +17,10 @@ app:
     resource: @AppBundle/Controller/
     type:     annotation
     prefix:   /
+
+u_pro_file:
+    resource: "@UProFileBundle/Resources/config/routing.yml"
+    prefix: /file
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

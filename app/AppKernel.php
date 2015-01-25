@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new Nelmio\CorsBundle\NelmioCorsBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Hautelook\AliceBundle\HautelookAliceBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
+            new UPro\FileBundle\UProFileBundle(),
 
             new AppBundle\AppBundle(),
         );

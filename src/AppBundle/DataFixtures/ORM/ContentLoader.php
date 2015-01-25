@@ -16,6 +16,7 @@ class ContentLoader extends DataFixtureLoader implements OrderedFixtureInterface
     {
         return  [
             __DIR__ . '/../Fixtures/users.yml',
+            __DIR__ . '/../Fixtures/customers.yml',
             __DIR__ . '/../Fixtures/projects.yml',
         ];
     }

@@ -19,3 +19,10 @@ Organizat\Model\Project:
           joinColumn:
             name: user_id
             referencedColumnName: id
+
+        customer:
+          targetEntity: Customer
+          inversedBy: projects
+          joinColumn:
+            name: customer_id
+            referencedColumnName: id

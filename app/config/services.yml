@@ -7,3 +7,9 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    upro.form_type.u_pro_file:
+        class: UPro\FileBundle\Form\UProFileType
+        arguments: [ @file.om, %u_pro_file.db_driver% ]
+        tags:
+            - { name: form.type, alias: u_pro_file }

@@ -8,6 +8,7 @@ class Project
     private $name;
     private $createdAt;
     private $user;
+    private $customer;
 
     public function __construct()
     {
@@ -91,5 +92,28 @@ class Project
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set customer
+     *
+     * @param \Organizat\Model\Customer $customer
+     * @return Project
+     */
+    public function setCustomer(\Organizat\Model\Customer $customer = null)
+    {
+        $this->customer = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Get customer
+     *
+     * @return \Organizat\Model\Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
     }
 }
