@@ -13,8 +13,8 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use JMS\Serializer\SerializationContext;
 
-use Organizat\Model\Project;
-use Organizat\Form\ProjectForm;
+use Kactus\Model\Project;
+use Kactus\Form\ProjectForm;
 
 class ProjectController extends FOSRestController
 {
@@ -48,16 +48,8 @@ class ProjectController extends FOSRestController
     }
 
     /**
-     * Create a new user
+     * Create a new projet
      *
-     * @ApiDoc(
-     *   resource = true,
-     *   input = "Znieh\Model\User",
-     *   statusCodes = {
-     *     201 = "Returned when successful",
-     *     400 = "Returned when the form has errors"
-     *   }
-     * )
      * @Rest\View(statusCode = Codes::HTTP_BAD_REQUEST)
      *
      * @param Request $request

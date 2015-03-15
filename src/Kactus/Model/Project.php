@@ -1,6 +1,6 @@
 <?php
 
-namespace Organizat\Model;
+namespace Kactus\Model;
 
 class Project
 {
@@ -74,10 +74,10 @@ class Project
     /**
      * Set user
      *
-     * @param \Organizat\Model\User $user
+     * @param \Kactus\Model\User $user
      * @return Project
      */
-    public function setUser(\Organizat\Model\User $user = null)
+    public function setUser(\Kactus\Model\User $user = null)
     {
         $this->user = $user;
 
@@ -87,7 +87,7 @@ class Project
     /**
      * Get user
      *
-     * @return \Organizat\Model\User
+     * @return \Kactus\Model\User
      */
     public function getUser()
     {
@@ -97,10 +97,10 @@ class Project
     /**
      * Set customer
      *
-     * @param \Organizat\Model\Customer $customer
+     * @param \Kactus\Model\Customer $customer
      * @return Project
      */
-    public function setCustomer(\Organizat\Model\Customer $customer = null)
+    public function setCustomer(\Kactus\Model\Customer $customer = null)
     {
         $this->customer = $customer;
 
@@ -110,7 +110,7 @@ class Project
     /**
      * Get customer
      *
-     * @return \Organizat\Model\Customer
+     * @return \Kactus\Model\Customer
      */
     public function getCustomer()
     {

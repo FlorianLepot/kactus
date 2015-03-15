@@ -71,7 +71,7 @@ doctrine:
             AppBundle:
                 type: yml
                 dir: %kernel.root_dir%/../src/AppBundle/Resources/config/doctrine
-                prefix: Organizat\Model
+                prefix: Kactus\Model
             UProFileBundle:
                 type: annotation
 
@@ -86,7 +86,7 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Organizat\Model\User
+    user_class: Kactus\Model\User
 
 nelmio_api_doc: ~
 
@@ -100,11 +100,17 @@ nelmio_cors:
         max_age: 0
         hosts: []
     paths:
+        '^/api/':
+            allow_origin: ['*']
+            allow_headers: ['*']
+            allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
+            max_age: 3600
         '^/':
             allow_origin: ['*']
             allow_headers: ['*']
             allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
             max_age: 3600
+            hosts: ['^api\.']
 
 fos_rest:
     param_fetcher_listener: true
@@ -122,7 +128,7 @@ fos_rest:
             html: true
     format_listener:
         rules:
-            - { path: ^/, priorities: [ html, json, xml ], fallback_format: ~, prefer_extension: true }
+            - { path: ^/api, priorities: [ html, json, xml ], fallback_format: ~, prefer_extension: true }
 
 hautelook_alice:
     locale: fr_FR

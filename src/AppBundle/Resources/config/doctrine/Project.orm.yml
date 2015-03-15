@@ -1,4 +1,4 @@
-Organizat\Model\Project:
+Kactus\Model\Project:
     type:  entity
     table: projects
     id:

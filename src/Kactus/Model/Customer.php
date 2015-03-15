@@ -1,6 +1,6 @@
 <?php
 
-namespace Organizat\Model;
+namespace Kactus\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -52,10 +52,10 @@ class Customer
     /**
      * Add projects
      *
-     * @param \Organizat\Model\Project $projects
+     * @param \Kactus\Model\Project $projects
      * @return Customer
      */
-    public function addProject(\Organizat\Model\Project $projects)
+    public function addProject(\Kactus\Model\Project $projects)
     {
         $this->projects[] = $projects;
 
@@ -65,9 +65,9 @@ class Customer
     /**
      * Remove projects
      *
-     * @param \Organizat\Model\Project $projects
+     * @param \Kactus\Model\Project $projects
      */
-    public function removeProject(\Organizat\Model\Project $projects)
+    public function removeProject(\Kactus\Model\Project $projects)
     {
         $this->projects->removeElement($projects);
     }

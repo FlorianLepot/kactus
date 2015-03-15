@@ -1,6 +1,6 @@
 <?php
 
-namespace Organizat\Model;
+namespace Kactus\Model;
 
 use FOS\UserBundle\Model\User as BaseUser;
 

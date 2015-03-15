@@ -1,6 +1,6 @@
 <?php
 
-namespace Organizat\Form;
+namespace Kactus\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -25,7 +25,7 @@ class ProjectForm extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Organizat\Model\Project',
+            'data_class' => 'Kactus\Model\Project',
             'csrf_protection' => false
         ));
     }

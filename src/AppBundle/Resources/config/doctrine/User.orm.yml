@@ -1,4 +1,4 @@
-Organizat\Model\User:
+Kactus\Model\User:
     type:  entity
     table: users
     id:

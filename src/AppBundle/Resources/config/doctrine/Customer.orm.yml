@@ -1,4 +1,4 @@
-Organizat\Model\Customer:
+Kactus\Model\Customer:
     type: entity
     table: customers
     id:

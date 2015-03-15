@@ -1,4 +1,4 @@
-Organizat\Model\Project:
-  organizat:
-    name: Organizat
+Kactus\Model\Project:
+  kactus:
+    name: Kactus
     customer: @upro

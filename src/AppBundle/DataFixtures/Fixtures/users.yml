@@ -1,4 +1,4 @@
-Organizat\Model\User:
+Kactus\Model\User:
     user{Darkouu, Naixy, Test}:
         username: <current()>
         plainPassword: <current()>
