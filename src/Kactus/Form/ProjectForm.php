@@ -15,7 +15,12 @@ class ProjectForm extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', null, array(
+                'label' => 'Nom'
+            ))
+            ->add('repoGithub', null, array(
+                'label' => 'Repository Github'
+            ))
         ;
     }
 

@@ -6,6 +6,7 @@ class Project
 {
     private $id;
     private $name;
+    private $repoGithub;
     private $createdAt;
     private $user;
     private $customer;
@@ -46,6 +47,29 @@ class Project
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set repoGithub
+     *
+     * @param string $repoGithub
+     * @return Project
+     */
+    public function setRepoGithub($repoGithub)
+    {
+        $this->repoGithub = $repoGithub;
+
+        return $this;
+    }
+
+    /**
+     * Get repoGithub
+     *
+     * @return string
+     */
+    public function getRepoGithub()
+    {
+        return $this->repoGithub;
     }
 
     /**

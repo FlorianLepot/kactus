@@ -48,6 +48,20 @@ class ProjectController extends FOSRestController
     }
 
     /**
+     * @Rest\View()
+     *
+     * @param Request $request
+     * @return View view instance
+     *
+     */
+    public function newProjectAction()
+    {
+        $project = new Project();
+        $form = $this->createForm(new ProjectForm(), $project);
+        return $form;
+    }
+
+    /**
      * Create a new projet
      *
      * @Rest\View(statusCode = Codes::HTTP_BAD_REQUEST)
@@ -58,13 +72,13 @@ class ProjectController extends FOSRestController
      */
     public function postProjectsAction(Request $request)
     {
-        $unit = new Project();
-        $form = $this->createForm(new ProjectForm(), $unit);
+        $project = new Project();
+        $form = $this->createForm(new ProjectForm(), $project);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($unit);
+            $em->persist($project);
             $em->flush();
             return new JsonResponse(['message' => 'Project created.'], 201);
         }

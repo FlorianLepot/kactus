@@ -10,8 +10,13 @@ Kactus\Model\Project:
         name:
             type: string
             length: 255
+            nullable: false
+        repoGithub:
+            type: string
+            length: 255
         createdAt:
             type: datetime
+            nullable: false
 
     manyToOne:
         user:

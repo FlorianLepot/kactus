@@ -3,6 +3,8 @@ angular
     .controller('DashboardCtrl', function ($scope, Restangular) {
 
         $scope.projects = [];
+        $scope.createProjectForm = true;
+        $scope.projectForm = null;
 
         Restangular
             .all('projects')
@@ -11,5 +13,11 @@ angular
                 $scope.projects = projects;
             });
 
-
+        Restangular
+            .oneUrl('projects', config.api + '/projects/new')
+            .get()
+            .then(function(projectForm) {
+                $scope.projectForm = projectForm.children;
+                console.log($scope.projectForm);
+            });
     });

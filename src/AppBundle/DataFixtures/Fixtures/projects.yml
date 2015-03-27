@@ -1,4 +1,5 @@
 Kactus\Model\Project:
   kactus:
     name: Kactus
+    repoGithub: http://github.com/FlorianLepot/kactus.io
     customer: @upro

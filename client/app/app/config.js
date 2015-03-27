@@ -24,10 +24,10 @@ angular
                 templateUrl: "views/dashboard.html",
                 data: { pageTitle: 'Tableau de bord' }
             })
-            .state('minor', {
-                url: "/minor",
-                templateUrl: "views/minor.html",
-                data: { pageTitle: 'Example view' }
+            .state('projects', {
+                url: "/projects",
+                templateUrl: "views/projects/index.html",
+                data: { pageTitle: 'Projets' }
             });
 
     });
